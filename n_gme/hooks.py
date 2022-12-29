@@ -95,13 +95,13 @@ app_include_js = "/assets/js/n_gme.js"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Contact": {
+		"on_update": "n_gme.cache.clear_cache",
+		"on_cancel": "n_gme.cache.clear_cache",
+		"on_trash": "n_gme.cache.clear_cache"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
