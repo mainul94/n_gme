@@ -132,9 +132,9 @@ doc_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "n_gme.event.get_events"
-# }
+override_whitelisted_methods = {
+	"frappe.email.get_contact_list": "n_gme.cache.get_contact_list"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

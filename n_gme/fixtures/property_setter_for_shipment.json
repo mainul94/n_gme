@@ -1,0 +1,19 @@
+[
+ {
+  "default_value": null,
+  "doc_type": "Workspace Shortcut",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "doc_view",
+  "modified": "2022-12-29 18:24:30.634120",
+  "name": "Workspace Shortcut-doc_view-options",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property": "options",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "\nList\nReport Builder\nDashboard\nTree\nNew\nCalendar\nInbox"
+ }
+]
