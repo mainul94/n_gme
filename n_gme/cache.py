@@ -18,7 +18,7 @@ def get_contact_list(txt, page_length=20):
     match_conditions = build_match_conditions("Contact")
     match_conditions = "and {0}".format(match_conditions) if match_conditions else ""
 
-    out = [for x in frappe.db.sql(
+    out = [x for x in frappe.db.sql(
         """select email_id as value,
         concat(first_name, ifnull(concat(' ',last_name), '' )) as description
         from tabContact
