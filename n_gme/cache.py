@@ -18,7 +18,7 @@ def get_contact_list(txt, page_length=20):
     match_conditions = build_match_conditions("Contact")
     match_conditions = "and {0}".format(match_conditions) if match_conditions else ""
 
-    out = frappe.db.sql(
+    out = [for x in frappe.db.sql(
         """select email_id as value,
         concat(first_name, ifnull(concat(' ',last_name), '' )) as description
         from tabContact
@@ -27,7 +27,7 @@ def get_contact_list(txt, page_length=20):
         limit %(page_length)s""",
         {"txt": "%" + txt + "%", "condition": match_conditions, "page_length": page_length},
         as_dict=True,
-    )
+    ) if x.value]
     out = filter(None, out)
 
     # update_contact_cache(out)
