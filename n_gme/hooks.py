@@ -135,7 +135,9 @@ doc_events = {
 # ------------------------------
 #
 override_whitelisted_methods = {
-	"frappe.email.get_contact_list": "n_gme.cache.get_contact_list"
+	"frappe.email.get_contact_list": "n_gme.cache.get_contact_list",
+    "frappe.desk.form.load.get_docinfo": "n_gme.load.form.get_docinfo",
+    "frappe.desk.form.load.getdoc": "n_gme.load.form.getdoc",
 }
 #
 # each overriding function accepts a `data` argument;
